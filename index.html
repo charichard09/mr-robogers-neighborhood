@@ -16,8 +16,8 @@
 
   <!-- make form to get input for convertToBeepBoopWont -->
   <div id="form-box" class="row">
-    <div class="col-6">
-      <form id="input-form">
+    <div class="col-6 general-box">
+      <form id="input-form" class="center">
         <label for="number-input" class="label-form">*Beep* Input a number and I will sing you a song! *Boop*
           <br>
           <input id="number-input" type="text" class="form-control" value=""> 
@@ -25,22 +25,16 @@
         <br>
         <button type="submit" id="button" class="center">submit input</button>
       </form>
+      <br>
+      <h5>*Beep* Here's my song *Boop*:</h5>
+      <ul id="song">
+      </ul>
     </div>
+
     <div class="col-6">
       <img src="./img/robo-face.png" alt="Picture of robot face" class="img-fluid">
     </div>
   </div>
 
-  <!-- make results mouth box -->
-  <div id="output-box" class="tjumbotron-fluid">
-    <h5>*Beep* Here's my song *Boop*:</h5>
-    <ul id="song">
-    </ul>
-  </div>
-
-
-
-  <!-- non-MVP: add CSS styling to make webpage a "feed me a number" robot face, mouth the input, replace 
-  mouth with output, put in "feed again" to reset -->
 </body>
 </html>
