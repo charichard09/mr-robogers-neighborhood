@@ -2,7 +2,7 @@
 
 #### By _**Richard Cha**_
 
-#### _{Brief description of application}_
+#### _A web application that takes user input and returns every value from 0-input with 1, 2, 3 substituted for Beep1, Boop!, Won't..._
 
 ## Technologies Used
 
@@ -13,17 +13,17 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_A web application that takes in a number as an input, and creates and prints a list from 0 to the number input, with any number containing 1 replaced with "Beep!", any number containing 2 replaced with "Boop!", and any number containing 3 replaced with "Won't you be my neighbor?"._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Go to link:_
+* [Mr Robogers Neighborhood](https://charichard09.github.io/mr-robogers-neighborhood)
+* _Enter a number into the form and hit submit input!_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _Alternatively:_
+* _Clone repo to a local directory_
+* _Open Index.html in your default browser_
 
 ## Tests
 
@@ -88,7 +88,7 @@ Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 
 
 ## Known Bugs
 
-* _None_
+* _When expanded vertically too far, white background is exposed._
 
 ## License
 
