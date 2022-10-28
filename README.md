@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Mr Robogers Neighborhood_
 
 #### By _**Richard Cha**_
 
@@ -27,21 +27,81 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Tests
 
-Use triple backticks at the beginning and end of your tests to have them formatted as code on your README.
+```
+Create a web app that takes a number from the user and returns an array of values from 0 to the user's inputted number with the following substitutions for 1's > "Beep!", 2's > "Boop!", 3's > "Won't you be my neighbor?"
+- take a number input
+- create an array from a loop with elements 0 to input
+- for... of loop through array of numbers:
+  - if element has 3 (use regex to check number for 3?), change element to "Won't you be my neighbor?"
+  - else if element has 2, change element to "Boop!"
+  - else if element has 1, change element to "Beep!"
+  - else 'continue'
+- return array
 
-Describe: firstFunction()
+Describe: convertToBeepBoopWont()
 
-  Test: "It should describe the first piece of logic for a function."
-  Code:
-  const example = "string";
-  firstFunction(example);
-  Expected Output: ["Expected outcome for first piece of logic"]
+Test: "It should take a number input from user and create an array from 0-input"
+Code:
+const inputRange = 10;
+const rangeArray = [];
+convertToBeepBoopWont(inputRange);
+Expected Output: rangeArray which contains [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-  Test: "It should describe the second piece of logic for a function."
-  Code:
-  const example2 = ["data"];
-  firstFunction(example2);
-  Expected Output: "Expected outcome for second piece of logic"
+Test: "It should for..of loop through rangeArray and console.log(element)"
+Code:
+const inputRange = 10;
+convertToBeepBoopWont(inputRange)
+Expected Output: 
+0
+1
+2
+.
+.
+10
+
+Test: "It should "
+Code:
+
+Expected Output: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 ## Known Bugs
 
