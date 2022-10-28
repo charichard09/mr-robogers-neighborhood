@@ -1,17 +1,5 @@
 // Business Logic
 
-
-// Test6: 'It should check if elements that contain 1, 2, 3 get substituted with precedence in longer input'
-// Code:
-// const inputRange = 23;
-// convertToBeepBoopWont(inputRange)
-// Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!",
-// "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Boop!", "Boop!",
-// "Boop!", "Won't you be my neighbor?"]
-
-// input for DevTools. To be passed by UI logic in the future.
-const inputRange = 23;
-
 function convertToBeepBoopWont(inputRange) {
   let rangeArray = [];
   let beepBoopWontArray = [];
@@ -38,5 +26,9 @@ function convertToBeepBoopWont(inputRange) {
   return beepBoopWontArray;
 }
 
-//call function to test in DevTools
+
+// UI Logic 
+
+
+//call function somewhere
 convertToBeepBoopWont(inputRange);
