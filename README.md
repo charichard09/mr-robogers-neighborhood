@@ -76,13 +76,7 @@ const inputRange = 3;
 convertToBeepBoopWont(inputRange)
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
-Test6: 'It should check if element contains a 1, change element to "Beep!", else continue'
-Code:
-const inputRange = 3;
-convertToBeepBoopWont(inputRange)
-Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
-
-Test7: 'It should check if elements that contain 1, 2, 3 get substituted with precedence in longer input'
+Test6: 'It should check if elements that contain 1, 2, 3 get substituted with precedence in longer input'
 Code:
 const inputRange = 23;
 convertToBeepBoopWont(inputRange)
