@@ -14,15 +14,10 @@ body {
   color: #F05924;
 }
 
-#header {
-  background-color: #AFC5D0;
-  color: black;
-  border: solid #658BA0 10px;
-  color: #F05924;
-}
-
 .label-form {
   font-size: larger;
+  display: block;
+  text-align: center;
 }
 
 .center {
@@ -33,4 +28,14 @@ body {
 
 #form-box {
   margin: 15px;
+}
+
+#button {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.song-output {
+  
 }
