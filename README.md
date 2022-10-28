@@ -13,7 +13,7 @@
 
 ## Description
 
-_A web application that takes in a number as an input, and creates and prints a list from 0 to the number input, with any number containing 1 replaced with "Beep!", any number containing 2 replaced with "Boop!", and any number containing 3 replaced with "Won't you be my neighbor?"._
+_A web application that takes in a name and number as an input, and creates and prints a list from 0 to the number input, with any number containing 1 replaced with "Beep!", any number containing 2 replaced with "Boop!", and any number containing 3 replaced with "Won't you be my neighbor {name}?"._
 
 ## Setup/Installation Requirements
 
