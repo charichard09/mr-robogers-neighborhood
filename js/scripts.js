@@ -28,7 +28,34 @@ function convertToBeepBoopWont(inputRange) {
 
 
 // UI Logic 
+function clearSong () {
+  const priorVersesLi = Array.from(document.querySelectorAll("li"));
+
+  for (const priorVerseLi of priorVersesLi) {
+    priorVerseLi.remove();
+  }
+}
 
 
-//call function somewhere
-convertToBeepBoopWont(inputRange);
+
+function sing(event) {
+  const singThroughArray = getUserInput();
+
+  clearSong();
+
+  for (const verse of singThroughArray) {
+    let verseLi = document.createElement("li");
+
+    verseLi.append(verse);
+    document.getElementById("song").append(verseLi);
+  }
+
+  event.preventDefault();
+}
+
+
+window.addEventListener("load", function() {
+  const inputForm = document.getElementById("input-form");
+
+  inputForm.addEventListener("submit", sing);
+});

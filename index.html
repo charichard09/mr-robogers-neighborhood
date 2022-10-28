@@ -12,26 +12,29 @@
 <body class="jumbotron">
   
   <div id="header" class="general-box">
-    <h1>Mr Roboger's Neighborhood</h1>
+    <h1>Welcome to Mr Roboger's Neighborhood</h1>
   </div>
 
   <!-- make form to get input for convertToBeepBoopWont -->
-  <div id="form-box" class="general-box">
-    <form>
-      <label for="numberInput" class=label-form>*Beep* Enter a number to count to *Boop* and I will sing you a song! *Beep*
+  <div id="mouth-box" class="general-box">
+    <form id="input-form">
+      <label for="number-input" class=label-form>*Beep* Enter a number to count to *Boop* and I will sing you a song! *Beep*
         <br>
-        <input id="numberInput" type="text" value="0"> 
+        <input id="number-input" type="text" value="0"> 
       </label>
       <br>
       <button type="submit">Submit</button>
     </form>
   </div>
 
-  <!-- make results box -->
-  <div id="class-box" class="general-box">
+  <!-- make results mouth box -->
+  <div id="output-box" class="general-box">
     <h3>*Beep* Here's my song *Boop*:</h3>
     <ul id="song">
     </ul>
   </div>
+
+  <!-- non-MVP: add CSS styling to make webpage a "feed me a number" robot face, mouth the input, replace 
+  mouth with output, put in "feed again" to reset -->
 </body>
 </html>
