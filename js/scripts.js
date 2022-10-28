@@ -37,6 +37,16 @@ function clearSong () {
 }
 
 
+function getUserInput() {
+  const inputRange = parseInt(document.getElementById("number-input").value);
+
+  if (isNaN(inputRange)) {
+    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", "!"];
+  }
+
+  return convertToBeepBoopWont(inputRange);
+}
+
 
 function sing(event) {
   const singThroughArray = getUserInput();
