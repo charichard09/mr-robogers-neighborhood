@@ -2,7 +2,7 @@
 
 #### By _**Richard Cha**_
 
-#### _A web application that takes user input and returns every value from 0-input with 1, 2, 3 substituted for Beep1, Boop!, Won't..._
+#### _A web application that takes user input and returns every value from 0-input with 1, 2, 3 substituted for Beep1, Boop!, Won't... respectively_
 
 ## Technologies Used
 

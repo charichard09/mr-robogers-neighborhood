@@ -35,7 +35,6 @@ function clearSong () {
   }
 }
 
-
 function getUserInput() {
   const inputRange = parseInt(document.getElementById("number-input").value);
   let nameInput = document.getElementById("name-input").value;
@@ -51,7 +50,6 @@ function getUserInput() {
 
   return convertToBeepBoopWont(inputRange, nameInput);
 }
-
 
 function sing(event) {
   const singThroughArray = getUserInput();
