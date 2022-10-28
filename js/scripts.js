@@ -1,18 +1,18 @@
 // Business Logic
-function convertToBeepBoopWont(inputRange) {
+function convertToBeepBoopWont(inputRangeParam, nameInputParam) {
   let rangeArray = [];
   let beepBoopWontArray = [];
   const threeRegExpPattern = new RegExp(/\d*3/);
   const twoRegExpPattern = new RegExp(/\d*2/);
   const oneRegExpPattern = new RegExp(/\d*1/);
 
-  for (i = 0; i <= inputRange; i++) {
+  for (i = 0; i <= inputRangeParam; i++) {
     rangeArray.push(i)
   }
 
   for (const element of rangeArray) {
     if (element.toString().match(threeRegExpPattern)) {
-      beepBoopWontArray.push("Won't you be my neighbor?");
+      beepBoopWontArray.push("Won't you be my neighbor " + nameInputParam + "?");
     } else if (element.toString().match(twoRegExpPattern)) {
       beepBoopWontArray.push("Boop!");
     } else if (element.toString().match(oneRegExpPattern)) {
@@ -38,12 +38,18 @@ function clearSong () {
 
 function getUserInput() {
   const inputRange = parseInt(document.getElementById("number-input").value);
+  let nameInput = document.getElementById("name-input").value;
 
   if (isNaN(inputRange)) {
-    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", "!"];
+    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
+  }
+  if (nameInput === "") {
+    nameInput = "stranger"
+  } else if (Number.isInteger(parseInt(nameInput))) {
+    nameInput = nameInput + " (nice to see a fellow robot)";
   }
 
-  return convertToBeepBoopWont(inputRange);
+  return convertToBeepBoopWont(inputRange, nameInput);
 }
 
 
