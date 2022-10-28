@@ -1,11 +1,11 @@
 body {
   box-sizing: border-box;
   font-family: sans-serif, Courier, monospace;
-  background-image: url("../img/robo-face.png");
+  /* background-image: url("../img/robo-face.png");
   background-size: 100% auto;
   background-color: transparent;
   background-repeat: no-repeat;
-  padding: 0%;
+  padding: 0%; */
 }
 
 .general-box {
