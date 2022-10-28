@@ -19,3 +19,13 @@ body {
 .label-form {
   font-size: larger;
 }
+
+.center {
+  display: block;
+  margin: auto;
+}
+
+.mouth-box {
+  background-image: url("../img/robo-face.png");
+  background-color: #24292F;
+}

@@ -16,20 +16,21 @@
   </div>
 
   <!-- make form to get input for convertToBeepBoopWont -->
-  <div id="mouth-box" class="general-box">
+  <div id="form-box" class="general-box">
     <form id="input-form">
-      <label for="number-input" class=label-form>*Beep* Enter a number to count to *Boop* and I will sing you a song! *Beep*
-        <br>
-        <input id="number-input" type="text" value=""> 
+      <label for="number-input" class="label-form">*Beep* Feed me a number *Boop* and I will sing you a song! *Beep*
+        <div class="mouth-box container-fluid">
+          <input id="number-input" type="text" class="center" value=""> 
+        </div>
       </label>
       <br>
-      <button type="submit">Submit</button>
+      <button type="submit">Feed</button>
     </form>
   </div>
 
   <!-- make results mouth box -->
   <div id="output-box" class="general-box">
-    <h3>*Beep* Here's my song *Boop*:</h3>
+    <h5>*Beep* Here's my song *Boop*:</h5>
     <ul id="song">
     </ul>
   </div>

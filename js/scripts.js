@@ -1,5 +1,4 @@
 // Business Logic
-
 function convertToBeepBoopWont(inputRange) {
   let rangeArray = [];
   let beepBoopWontArray = [];
@@ -52,7 +51,6 @@ function sing(event) {
   const singThroughArray = getUserInput();
 
   clearSong();
-
   for (const verse of singThroughArray) {
     let verseLi = document.createElement("li");
 
