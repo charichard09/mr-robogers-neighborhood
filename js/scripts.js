@@ -55,6 +55,7 @@ function sing(event) {
     let verseLi = document.createElement("li");
 
     verseLi.append(verse);
+    verseLi.setAttribute("class", "list-group-item");
     document.getElementById("song").append(verseLi);
   }
 
