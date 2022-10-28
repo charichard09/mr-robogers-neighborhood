@@ -1,11 +1,11 @@
 // Business Logic
 
 
-// Test4: 'It should check else if element contains a 2, replace element to "Boop!", else continue'
+// Test5: 'It should check if element contains a 1, replace element to "Beep!", else continue'
 // Code:
 // const inputRange = 3;
 // convertToBeepBoopWont(inputRange)
-// Expected Output: [0, 1, "Boop!", "Won't you be my neighbor?"]
+// Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
 // input for DevTools. To be passed by UI logic in the future.
 const inputRange = 3;
@@ -26,6 +26,8 @@ function convertToBeepBoopWont(inputRange) {
       beepBoopWontArray.push("Won't you be my neighbor?");
     } else if (element.toString().match(twoRegExpPattern)) {
       beepBoopWontArray.push("Boop!");
+    } else if (element.toString().match(oneRegExpPattern)) {
+      beepBoopWontArray.push("Beep!");
     } else {
       beepBoopWontArray.push(element);
     };
