@@ -39,13 +39,13 @@ function getUserInput() {
   const inputRange = parseInt(document.getElementById("number-input").value);
   let nameInput = document.getElementById("name-input").value;
 
-  if (isNaN(inputRange)) {
-    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
-  }
   if (nameInput === "") {
     nameInput = "stranger"
   } else if (Number.isInteger(parseInt(nameInput))) {
     nameInput = nameInput + " (nice to see a fellow robot)";
+  }
+  if (isNaN(inputRange)) {
+    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
   }
 
   return convertToBeepBoopWont(inputRange, nameInput);
