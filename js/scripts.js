@@ -8,7 +8,7 @@ function inputErrorCheck(name, range) {
     errorArray.push(false);
   }
 
-  if (Number.isNaN(parseInt(range)) || range.match(/\d+\s\d+/)) {
+  if (Number.isNaN(parseInt(range)) || /\d+\s+\d+/.test(range.toString())) {
     errorArray.push(true);
   } else {
     errorArray.push(false);
