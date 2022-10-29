@@ -20,10 +20,8 @@ function convertIntToBeepBoopWont(rangeInputParam, nameInputParam) {
 
 // UI Logic 
 function clearSongOutput () {
-  const priorVersesLi = Array.from(document.querySelectorAll("li"));
-
-  for (const priorVerseLi of priorVersesLi) {
-    priorVerseLi.remove();
+  for (const priorLi of Array.from(document.querySelectorAll("li"))) {
+    priorLi.remove();
   }
 }
 
@@ -36,7 +34,7 @@ function inputToBeepBoopWont() {
   } else if (Number.isInteger(parseInt(nameInput))) {
     nameInput = nameInput + " (nice to see a fellow robot)";
   }
-  
+
   if (Number.isNaN(rangeInput)) {
     return ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
   }
