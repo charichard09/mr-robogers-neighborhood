@@ -21,14 +21,14 @@ function substituteInputToBeepBoopWont(rangeInputParam, nameInputParam) {
   let beepBoopWontArray = [];
 
   for (let i = 0; i <= rangeInputParam; i++) {
-    if (/\d*3/.test(i)) {
+    if (/\d*3/.test(i.toString())) {
       beepBoopWontArray.push("Won't you be my neighbor " + nameInputParam + "?");
-    } else if (/\d*2/.test(i)) {
+    } else if (/\d*2/.test(i.toString())) {
       beepBoopWontArray.push("Boop!");
-    } else if (/\d*1/.test(i)) {
+    } else if (/\d*1/.test(i.toString())) {
       beepBoopWontArray.push("Beep!");
     } else {
-      beepBoopWontArray.push(i);
+      beepBoopWontArray.push(i.toString());
     };
   }
 
