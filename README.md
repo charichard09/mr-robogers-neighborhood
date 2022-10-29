@@ -74,6 +74,29 @@ Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 
 "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Boop!", "Boop!",
 "Boop!", "Won't you be my neighbor?"]
 
+Describe: inputError()
+
+Test1: "It should take an empty string for nameInput and return true"
+Code:
+const nameInput = "";
+const rangeInput = 3;
+inputErrorCheck(nameInput, rangeInput);
+Expected Output: true
+
+Test2: "It should take an number for nameInput and true"
+Code:
+const nameInput = "5";
+const rangeInput = 3;
+inputErrorCheck(nameInput, rangeInput);
+Expected Output: true
+
+Test3: "It should take an 'a' for rangeInput and return a true"
+Code:
+const nameInput = "a";
+const rangeInput = "a";
+inputErrorCheck(nameInput, rangeInput);
+Expected Output: true
+
 ```
 
 ## Known Bugs

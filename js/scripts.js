@@ -1,5 +1,25 @@
 // Business Logic
-function convertIntToBeepBoopWont(rangeInputParam, nameInputParam) {
+function inputError(name, range) {
+//   let nameCheck = name;
+//   let rangeCheck = range;
+
+  // if (name === "") {
+  //   name = "stranger"
+  // } else if (Number.isInteger(parseInt(name))) {
+  //   name = name + " (nice to see a fellow robot)";
+  // }
+
+  // if (Number.isNaN(parseInt(range))) {
+  //   rangeCheck = ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", name, "!"];
+  // }
+  if (name.trim() === "") {
+    return true;
+  }
+  
+  return false;
+}
+
+function substituteInputToBeepBoopWont(rangeInputParam, nameInputParam) {
   let beepBoopWontArray = [];
 
   for (let i = 0; i <= rangeInputParam; i++) {
@@ -25,28 +45,20 @@ function clearSongOutput () {
   }
 }
 
-function inputToBeepBoopWont() {
-  const rangeInput = parseInt(document.getElementById("number-input").value);
-  let nameInput = document.getElementById("name-input").value;
+function inputToSubstituter() {
+  const nameInput = document.getElementById("name-input").value;
+  const rangeInput = document.getElementById("number-input").value;
 
-  if (nameInput === "") {
-    nameInput = "stranger"
-  } else if (Number.isInteger(parseInt(nameInput))) {
-    nameInput = nameInput + " (nice to see a fellow robot)";
-  }
+  // inputErrorCheck(nameInput, rangeInput);
 
-  if (Number.isNaN(rangeInput)) {
-    return ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
-  }
-
-  return convertIntToBeepBoopWont(rangeInput, nameInput);
+  return substituteInputToBeepBoopWont(rangeInput, nameInput);
 }
 
 function songOutput(event) {
   event.preventDefault();
   clearSongOutput();
 
-  for (const verse of inputToBeepBoopWont()) {
+  for (const verse of inputToSubstituter()) {
     let verseLi = document.createElement("li");
 
     verseLi.append(verse);
