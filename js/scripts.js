@@ -1,5 +1,5 @@
 // Business Logic
-function convertToBeepBoopWont(rangeInputParam, nameInputParam) {
+function convertIntToBeepBoopWont(rangeInputParam, nameInputParam) {
   let beepBoopWontArray = [];
 
   for (let i = 0; i <= rangeInputParam; i++) {
@@ -27,7 +27,7 @@ function clearSongOutput () {
   }
 }
 
-function getUserInput() {
+function inputToBeepBoopWont() {
   const rangeInput = parseInt(document.getElementById("number-input").value);
   let nameInput = document.getElementById("name-input").value;
 
@@ -36,30 +36,30 @@ function getUserInput() {
   } else if (Number.isInteger(parseInt(nameInput))) {
     nameInput = nameInput + " (nice to see a fellow robot)";
   }
-  if (isNaN(rangeInput)) {
+  
+  if (Number.isNaN(rangeInput)) {
     return ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
   }
 
-  return convertToBeepBoopWont(rangeInput, nameInput);
+  return convertIntToBeepBoopWont(rangeInput, nameInput);
 }
 
-function sing(event) {
-  const singThroughArray = getUserInput();
-
+function songOutput(event) {
+  event.preventDefault();
   clearSongOutput();
-  for (const verse of singThroughArray) {
+
+  for (const verse of inputToBeepBoopWont()) {
     let verseLi = document.createElement("li");
 
     verseLi.append(verse);
     verseLi.setAttribute("class", "list-group-item");
     document.getElementById("song").append(verseLi);
   }
-  event.preventDefault();
 }
 
 
 window.addEventListener("load", function() {
   const inputForm = document.getElementById("input-form");
 
-  inputForm.addEventListener("submit", sing);
+  inputForm.addEventListener("submit", songOutput);
 });
