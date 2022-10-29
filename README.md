@@ -98,6 +98,13 @@ const rangeInput = "a";
 inputErrorCheck(nameInput, rangeInput);
 Expected Output: [false, true]
 
+Test4: "It should take an '5    5' for rangeInput and return a true"
+Code:
+const nameInput = "a";
+const rangeInput = "5    5";
+inputErrorCheck(nameInput, rangeInput);
+Expected Output: [false, true]
+
 ```
 
 ## Known Bugs
