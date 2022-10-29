@@ -28,16 +28,6 @@ _A web application that takes in a name and number as an input, and creates and 
 ## Tests
 
 ```
-Create a web app that takes a number from the user and returns an array of values from 0 to the user's inputted number with the following substitutions for 1's > "Beep!", 2's > "Boop!", 3's > "Won't you be my neighbor?"
-- take a number input
-- create an array from a loop with elements 0 to input
-- for... of loop through array of numbers:
-  - if element has 3 (use regex to check number for 3?), change element to "Won't you be my neighbor?"
-  - else if element has 2, change element to "Boop!"
-  - else if element has 1, change element to "Beep!"
-  - else 'continue'
-- return array
-
 Describe: convertToBeepBoopWont()
 
 Test1: "It should take a number input from user and create an array from 0-input"
