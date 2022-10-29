@@ -1,20 +1,26 @@
 // Business Logic
-function inputErrorCheck(name, range) {
-  let errorArray = [];
-  
-  if (name.trim() === "" || Number.isInteger(parseInt(name))) {
-    errorArray.push(true);
-  } else {
-    errorArray.push(false);
-  }
 
-  if (Number.isNaN(parseInt(range)) || /\d+\s+\d+/.test(range.toString())) {
-    errorArray.push(true);
-  } else {
-    errorArray.push(false);
-  }
+// Test5: "It should take 'string' as second argument and return true if not string"
+// Code:
+// const stringParam = 5;
+// const numberParam = "5    5";
+// inputErrorCheck(nameInput, rangeInput);
+// Expected Output: true
 
-  return errorArray;
+function inputErrorCheck(input, dataTypeParam) {
+  // if (dataTypeParam === "
+  //   if (input.trim() === "" || Number.isInteger(parseInt(input))) {
+  //     errorArray.push(true);
+  //   } else {
+  //     errorArray.push(false);
+  //   }
+  if (dataTypeParam === "string") {
+    if (Number.isNaN(parseInt(input)) || /\d+\s+\d+/.test(input.toString())) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 function substituteInputToBeepBoopWont(rangeInputParam, nameInputParam) {
@@ -52,25 +58,24 @@ function mrRobogersSong() {
   let rangeInput = document.getElementById("number-input").value;
   let inputErrorArray = inputErrorCheck(nameInput, rangeInput);
 
-  if (inputErrorArray.includes(true)) {
+  if (inputErrorCheck(nameInput, "string")) {
     const errorSpan = document.createElement("span");
-    const errorSpan2 = document.createElement("span");
+    
+    // const errorSpan2 = document.createElement("span");
+
 
     errorSpan.setAttribute("class", "badge badge-danger");
     errorSpan.append("ERROR: Not a Name");
-    errorSpan2.setAttribute("class", "badge badge-danger");
-    errorSpan2.append("ERROR: Not a Number");
-    
-    if (inputErrorArray.indexOf(true) === 0 && inputErrorArray.indexOf(true, 1) === 1) {
-      document.getElementById("name-input").after(errorSpan);
-      document.getElementById("number-input").after(errorSpan2);
-    } else if (inputErrorArray.indexOf(true) === 0) {
-      document.getElementById("name-input").after(errorSpan);
-    } else {
-      document.getElementById("number-input").after(errorSpan2);
-    }
+    document.getElementById("name-input").after(errorSpan);
+
+    // document.getElementById("number-input").after(errorSpan2)
+    // errorSpan2.setAttribute("class", "badge badge-danger");
+    // errorSpan2.append("ERROR: Not a Number");
     return "ERROR";
   }
+    
+
+
 
   return substituteInputToBeepBoopWont(rangeInput, nameInput);
 }

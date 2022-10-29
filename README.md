@@ -107,17 +107,17 @@ Expected Output: [false, true]
 
 Test5: "It should take 'number' as second argument and return true if not number"
 Code:
-const nameInput = "a";
-const rangeInput = "5    5";
+const stringParam = "a";
+const numberParam = "5    5";
 inputErrorCheck(nameInput, rangeInput);
-Expected Output: [false, true]
+Expected Output: true
 
 Test6: "It should take 'string' as second argument and return true if not string"
 Code:
-const nameInput = 5;
-const rangeInput = "5    5";
+const stringParam = 5;
+const numberParam = "5    5";
 inputErrorCheck(nameInput, rangeInput);
-Expected Output: [false, true]
+Expected Output: true
 
 ```
 
