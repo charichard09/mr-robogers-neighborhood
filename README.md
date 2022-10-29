@@ -74,7 +74,8 @@ Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 
 "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Boop!", "Boop!",
 "Boop!", "Won't you be my neighbor?"]
 
-Describe: inputError()
+
+Describe: inputErrorCheck()
 
 Test1: "It should take an empty string for nameInput and return true"
 Code:
