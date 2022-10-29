@@ -8,7 +8,7 @@ function inputErrorCheck(name, range) {
     errorArray.push(false);
   }
 
-  if (Number.isNaN(parseInt(range))) {
+  if (Number.isNaN(parseInt(range)) || range.match(/\d+\s\d+/)) {
     errorArray.push(true);
   } else {
     errorArray.push(false);
@@ -21,11 +21,11 @@ function substituteInputToBeepBoopWont(rangeInputParam, nameInputParam) {
   let beepBoopWontArray = [];
 
   for (let i = 0; i <= rangeInputParam; i++) {
-    if (i.toString().match(/\d*3/)) {
+    if (/\d*3/.test(i)) {
       beepBoopWontArray.push("Won't you be my neighbor " + nameInputParam + "?");
-    } else if (i.toString().match(/\d*2/)) {
+    } else if (/\d*2/.test(i)) {
       beepBoopWontArray.push("Boop!");
-    } else if (i.toString().match(/\d*1/)) {
+    } else if (/\d*1/.test(i)) {
       beepBoopWontArray.push("Beep!");
     } else {
       beepBoopWontArray.push(i);
