@@ -12,11 +12,20 @@ function inputError(name, range) {
   // if (Number.isNaN(parseInt(range))) {
   //   rangeCheck = ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", name, "!"];
   // }
-  if (name.trim() === "") {
-    return true;
+  let errorArray = [];
+  if (name.trim() === "" || Number.isInteger(parseInt(name))) {
+    errorArray.push(true);
+  } else {
+    errorArray.push(false);
   }
-  
-  return false;
+
+  if (Number.isNaN(parseInt(range))) {
+    errorArray.push(true);
+  } else {
+    errorArray.push(false);
+  }
+
+  return errorArray;
 }
 
 function substituteInputToBeepBoopWont(rangeInputParam, nameInputParam) {

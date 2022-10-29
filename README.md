@@ -81,21 +81,21 @@ Code:
 const nameInput = "";
 const rangeInput = 3;
 inputErrorCheck(nameInput, rangeInput);
-Expected Output: true
+Expected Output: [true, false]
 
-Test2: "It should take an number for nameInput and true"
+Test2: "It should take a string "5" for nameInput and return true"
 Code:
 const nameInput = "5";
 const rangeInput = 3;
 inputErrorCheck(nameInput, rangeInput);
-Expected Output: true
+Expected Output: [true, false]
 
 Test3: "It should take an 'a' for rangeInput and return a true"
 Code:
 const nameInput = "a";
 const rangeInput = "a";
 inputErrorCheck(nameInput, rangeInput);
-Expected Output: true
+Expected Output: [false, true]
 
 ```
 
