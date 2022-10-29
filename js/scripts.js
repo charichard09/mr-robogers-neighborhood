@@ -54,7 +54,6 @@ function sing(event) {
     verseLi.setAttribute("class", "list-group-item");
     document.getElementById("song").append(verseLi);
   }
-
   event.preventDefault();
 }
 
