@@ -7,7 +7,7 @@ function isDataType(input, dataTypeParam) {
       return true;
     }
   } else if (dataTypeParam === "numberString") {
-    if (Number.isNaN(parseInt(input)) || /\d+\s+(\w|\d)+/.test(input)) {
+    if (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input)) {
       return false;
     } else {
       return true;
