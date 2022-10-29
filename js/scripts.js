@@ -1,25 +1,20 @@
 // Business Logic
-
-// Test5: "It should take 'string' as second argument and return true if not string"
-// Code:
-// const stringParam = 5;
-// const numberParam = "5    5";
-// inputErrorCheck(nameInput, rangeInput);
-// Expected Output: true
-
-function inputErrorCheck(input, dataTypeParam) {
-  // if (dataTypeParam === "
-  //   if (input.trim() === "" || Number.isInteger(parseInt(input))) {
-  //     errorArray.push(true);
-  //   } else {
-  //     errorArray.push(false);
-  //   }
+function isDataType(input, dataTypeParam) {
   if (dataTypeParam === "string") {
-    if (Number.isNaN(parseInt(input)) || /\d+\s+\d+/.test(input.toString())) {
-      return true;
+    if (input.toString().trim() === "" || Number.isInteger(parseInt(input))) {
+    return false;
     } else {
-      return false;
+      return true;
     }
+  } else if (dataTypeParam === "numberString") {
+    if (Number.isNaN(parseInt(input)) || /\d+\s+(\w|\d)+/.test(input)) {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    console.log("argument 2 must be 'string' or 'numberString'")
+    return undefined;
   }
 }
 
@@ -56,26 +51,29 @@ function clearSongOutput () {
 function mrRobogersSong() {
   let nameInput = document.getElementById("name-input").value;
   let rangeInput = document.getElementById("number-input").value;
-  let inputErrorArray = inputErrorCheck(nameInput, rangeInput);
+  const errorSpan = document.createElement("span");
+  const errorSpan2 = document.createElement("span");
 
-  if (inputErrorCheck(nameInput, "string")) {
-    const errorSpan = document.createElement("span");
-    
-    // const errorSpan2 = document.createElement("span");
+  errorSpan.setAttribute("class", "badge badge-danger");
+  errorSpan.append("ERROR: Not Valid Name Input");
+  errorSpan2.setAttribute("class", "badge badge-danger");
+  errorSpan2.append("ERROR: Not a Valid Number Input");
 
-
-    errorSpan.setAttribute("class", "badge badge-danger");
-    errorSpan.append("ERROR: Not a Name");
+  if (!isDataType(nameInput, "string") && !isDataType(rangeInput, "numberString")) {
     document.getElementById("name-input").after(errorSpan);
-
-    // document.getElementById("number-input").after(errorSpan2)
-    // errorSpan2.setAttribute("class", "badge badge-danger");
-    // errorSpan2.append("ERROR: Not a Number");
+    document.getElementById("number-input").after(errorSpan2)
     return "ERROR";
   }
-    
 
+  if (!isDataType(nameInput, "string")) {
+    document.getElementById("name-input").after(errorSpan);
+    return "ERROR";
+  }
 
+  if (!isDataType(rangeInput, "numberString")) {
+    document.getElementById("number-input").after(errorSpan2)
+    return "ERROR";
+  }
 
   return substituteInputToBeepBoopWont(rangeInput, nameInput);
 }
