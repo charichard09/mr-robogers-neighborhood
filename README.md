@@ -105,19 +105,22 @@ const rangeInput = "5    5";
 inputErrorCheck(nameInput, rangeInput);
 Expected Output: [false, true]
 
-Test5: "It should take 'number' as second argument and return true if not number"
-Code:
-const stringParam = "a";
-const numberParam = "5    5";
-inputErrorCheck(nameInput, rangeInput);
-Expected Output: true
 
-Test6: "It should take 'string' as second argument and return true if not string"
+Describe: isDataType() evolved from inputErrorCheck()
+
+Test1: "It should take 'numberString' as second argument and return false if not number"
 Code:
-const stringParam = 5;
-const numberParam = "5    5";
-inputErrorCheck(nameInput, rangeInput);
-Expected Output: true
+const input = "a";
+const dataType = "number";
+isDataType(nameInput, rangeInput);
+Expected Output: false;
+
+Test2: "It should take 'string' as second argument and return false if not string"
+Code:
+const input = "5";
+const dataType = "string";
+isDataType(nameInput, rangeInput);
+Expected Output: false
 
 ```
 
