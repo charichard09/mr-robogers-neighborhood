@@ -1,24 +1,16 @@
 // Business Logic
 function convertToBeepBoopWont(rangeInputParam, nameInputParam) {
-  let rangeArray = [];
   let beepBoopWontArray = [];
-  const threeRegExpPattern = new RegExp(/\d*3/);
-  const twoRegExpPattern = new RegExp(/\d*2/);
-  const oneRegExpPattern = new RegExp(/\d*1/);
 
-  for (i = 0; i <= rangeInputParam; i++) {
-    rangeArray.push(i)
-  }
-
-  for (const element of rangeArray) {
-    if (element.toString().match(threeRegExpPattern)) {
+  for (let i = 0; i <= rangeInputParam; i++) {
+    if (i.toString().match(/\d*3/)) {
       beepBoopWontArray.push("Won't you be my neighbor " + nameInputParam + "?");
-    } else if (element.toString().match(twoRegExpPattern)) {
+    } else if (i.toString().match(/\d*2/)) {
       beepBoopWontArray.push("Boop!");
-    } else if (element.toString().match(oneRegExpPattern)) {
+    } else if (i.toString().match(/\d*1/)) {
       beepBoopWontArray.push("Beep!");
     } else {
-      beepBoopWontArray.push(element);
+      beepBoopWontArray.push(i);
     };
   }
 
@@ -45,7 +37,7 @@ function getUserInput() {
     nameInput = nameInput + " (nice to see a fellow robot)";
   }
   if (isNaN(rangeInput)) {
-    return ["!", "ER", "R", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
+    return ["!", "ERR", "OR", "T", "ha", "t", "Wa", "s", "Not", "A", "Num", "b", "er", nameInput, "!"];
   }
 
   return convertToBeepBoopWont(rangeInput, nameInput);
