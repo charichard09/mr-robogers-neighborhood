@@ -46,7 +46,7 @@ function mrRobogersSong() {
   const errorSpan2 = document.createElement("span");
 
   errorSpan.setAttribute("class", "badge badge-danger");
-  errorSpan.append("ERROR: Not Valid Name Input");
+  errorSpan.append("ERROR: Not a Valid Name Input");
   errorSpan2.setAttribute("class", "badge badge-danger");
   errorSpan2.append("ERROR: Not a Valid Number Input");
 
