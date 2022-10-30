@@ -13,7 +13,6 @@ function isDataType(input, dataTypeParam) {
       return true;
     }
   } else {
-    console.log("argument 2 must be 'string' or 'numberString'")
     return undefined;
   }
 }
