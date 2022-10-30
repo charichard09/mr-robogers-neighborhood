@@ -1,11 +1,11 @@
 // Business Logic
-function isDataType(input, dataTypeParam) {
+function isNotDataType(input, dataTypeParam) {
   if (dataTypeParam === "string" && (input.toString().trim() === "" || Number.isInteger(parseInt(input)))) {
-    return false;
-  } else if (dataTypeParam === "numberString" && (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input))) {
-    return false;
-  } else {
     return true;
+  } else if (dataTypeParam === "numberString" && (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input))) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -50,18 +50,18 @@ function mrRobogersSong() {
   errorSpan2.setAttribute("class", "badge badge-danger");
   errorSpan2.append("ERROR: Not a Valid Number Input");
 
-  if (!isDataType(nameInput, "string") && !isDataType(rangeInput, "numberString")) {
+  if (isNotDataType(nameInput, "string") && isNotDataType(rangeInput, "numberString")) {
     document.getElementById("name-input").after(errorSpan);
     document.getElementById("number-input").after(errorSpan2)
     return "ERROR";
   }
 
-  if (!isDataType(nameInput, "string")) {
+  if (isNotDataType(nameInput, "string")) {
     document.getElementById("name-input").after(errorSpan);
     return "ERROR";
   }
 
-  if (!isDataType(rangeInput, "numberString")) {
+  if (isNotDataType(rangeInput, "numberString")) {
     document.getElementById("number-input").after(errorSpan2)
     return "ERROR";
   }
