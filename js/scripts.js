@@ -1,21 +1,11 @@
 // Business Logic
 function isDataType(input, dataTypeParam) {
-  if (dataTypeParam === "string") {
-    if (input.toString().trim() === "" || Number.isInteger(parseInt(input))) {
+  if (dataTypeParam === "string" && (input.toString().trim() === "" || Number.isInteger(parseInt(input)))) {
     return false;
-    } else {
-      return true;
-    }
-
-  } else if (dataTypeParam === "numberString") {
-    if (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input)) {
-      return false;
-    } else {
-      return true;
-    }
-
+  } else if (dataTypeParam === "numberString" && (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input))) {
+    return false;
   } else {
-    return undefined;
+    return true;
   }
 }
 
