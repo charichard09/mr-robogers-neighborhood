@@ -6,12 +6,14 @@ function isDataType(input, dataTypeParam) {
     } else {
       return true;
     }
+
   } else if (dataTypeParam === "numberString") {
     if (Number.isNaN(parseInt(input)) || /\d+\s+\w+/.test(input)) {
       return false;
     } else {
       return true;
     }
+
   } else {
     return undefined;
   }
