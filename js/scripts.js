@@ -54,17 +54,13 @@ function mrRobogersSong() {
     document.getElementById("name-input").after(errorSpan);
     document.getElementById("number-input").after(errorSpan2)
     return "ERROR";
-  }
-
-  if (isNotDataType(nameInput, "string")) {
+  } else if (isNotDataType(nameInput, "string")) {
     document.getElementById("name-input").after(errorSpan);
     return "ERROR";
-  }
-
-  if (isNotDataType(rangeInput, "numberString")) {
+  } else if (isNotDataType(rangeInput, "numberString")) {
     document.getElementById("number-input").after(errorSpan2)
     return "ERROR";
-  }
+  } 
 
   return substituteInputToBeepBoopWont(rangeInput, nameInput);
 }
